@@ -1,13 +1,14 @@
 <template>
 	<div id="app">
-		<router-view></router-view>
+		<keep-alive exclude="Detail">
+			<router-view></router-view>
+		</keep-alive>
 		<MainTabBar></MainTabBar>
 	</div>
 </template>
 
 <script>
 import MainTabBar from "components/content/mainTabbar/MainTabBar";
-
 export default {
 	name: "App",
 	components: {
@@ -16,5 +17,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

@@ -1,36 +1,51 @@
 <template>
 	<tab-bar>
-		<tab-bar-item path="/home" activeColor="pink">
-			<!-- 别名在src里要加~ -->
-			<!-- <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt /> -->
-			<img slot="item-icon" src="~assets/img/tabbar/home.svg" />
-			<img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" />
-			<div slot="item-text">首页</div>
-		</tab-bar-item>
-		<tab-bar-item path="/category" activeColor="pink">
-			<img slot="item-icon" src="~assets/img/tabbar/category.svg" />
-			<img
-				slot="item-icon-active"
-				src="~assets/img/tabbar/category_active.svg"
-			/>
-			<div slot="item-text">分类</div>
-		</tab-bar-item>
-		<tab-bar-item path="/cart" activeColor="pink">
-			<img slot="item-icon" src="~assets/img/tabbar/shopcart.svg" />
-			<img
-				slot="item-icon-active"
-				src="~assets/img/tabbar/shopcart_active.svg"
-			/>
-			<div slot="item-text">购物车</div>
-		</tab-bar-item>
-		<tab-bar-item path="/profile" activeColor="deepPink">
-			<img slot="item-icon" src="~assets/img/tabbar/profile.svg" />
-			<img
-				slot="item-icon-active"
-				src="~assets/img/tabbar/profile_active.svg"
-			/>
-			<div slot="item-text">我的</div>
-		</tab-bar-item>
+		<template>
+			<tab-bar-item path="/home" activeColor="pink">
+				<template v-slot:item-icon>
+					<img src="~assets/img/tabbar/home.svg" />
+				</template>
+				<template v-slot:item-icon-active>
+					<img src="~assets/img/tabbar/home_active.svg" />
+				</template>
+				<template v-slot:item-text>
+					<div>首页</div>
+				</template>
+			</tab-bar-item>
+			<tab-bar-item path="/category" activeColor="pink">
+				<template v-slot:item-icon>
+					<img src="~assets/img/tabbar/category.svg" />
+				</template>
+				<template v-slot:item-icon-active>
+					<img src="~assets/img/tabbar/category_active.svg" />
+				</template>
+				<template v-slot:item-text>
+					<div>分类</div>
+				</template>
+			</tab-bar-item>
+			<tab-bar-item path="/cart" activeColor="pink">
+				<template v-slot:item-icon>
+					<img src="~assets/img/tabbar/shopcart.svg" />
+				</template>
+				<template v-slot:item-icon-active>
+					<img src="~assets/img/tabbar/shopcart_active.svg" />
+				</template>
+				<template v-slot:item-text>
+					<div>购物车</div>
+				</template>
+			</tab-bar-item>
+			<tab-bar-item path="/profile" activeColor="deepPink">
+				<template v-slot:item-icon>
+					<img src="~assets/img/tabbar/profile.svg" />
+				</template>
+				<template v-slot:item-icon-active>
+					<img src="~assets/img/tabbar/profile_active.svg" />
+				</template>
+				<template v-slot:item-text>
+					<div>我的</div>
+				</template>
+			</tab-bar-item>
+		</template>
 	</tab-bar>
 </template>
 

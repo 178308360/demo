@@ -13,30 +13,30 @@
 	</div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 export default {
-  name: 'TabBarItem',
-  props: {
-    path: String,
-    activeColor: {
-      type: String,
-      default: 'red',
-    },
-  },
-  computed: {
-    isActive() {
-      return this.$route.path.indexOf(this.path) !== -1
-    },
-    activeStyle() {
-      return this.isActive ? { color: this.activeColor } : {}
-    },
-  },
-  methods: {
-    itemClick() {
-      this.$router.push(this.path)
-    },
-  },
-}
+	name: "TabBarItem",
+	props: {
+		path: String,
+		activeColor: {
+			type: String,
+			default: "red"
+		}
+	},
+	computed: {
+		isActive() {
+			return this.$route.path.indexOf(this.path) !== -1;
+		},
+		activeStyle() {
+			return this.isActive ? { color: this.activeColor } : {};
+		}
+	},
+	methods: {
+		itemClick() {
+			this.$router.push(this.path);
+		}
+	}
+};
 </script>
 
 <style lang="scss" scoped>
